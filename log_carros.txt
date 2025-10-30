@@ -1,0 +1,4 @@
+[2025-10-30T17:36:57.3185665] CADASTRADO: Modelo: ertert, Ano: 1955, Cor: asdasda
+[2025-10-30T17:39:20.8934356] CADASTRADO: Modelo: corsa, Ano: 2020, Cor: rosa
+[2025-10-30T17:39:49.1486809] CADASTRADO: Modelo: corsa, Ano: 1995, Cor: rosa
+[2025-10-30T17:40:39.4504234] CADASTRADO: Modelo: corsa, Ano: 1995, Cor: preta

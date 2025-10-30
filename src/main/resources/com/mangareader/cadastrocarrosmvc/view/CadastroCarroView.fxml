@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.4" prefHeight="500.0" prefWidth="900.0"
+           xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.mangareader.cadastrocarrosmvc.controller.CadastroCarroController">
+
+    <VBox alignment="TOP_LEFT" spacing="10" style="-fx-padding: 20;">
+        <Label text="Cadastro de Carros (MVC)" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+        <GridPane hgap="10" vgap="10">
+            <padding>
+                <Insets top="15"/>
+            </padding>
+            <Label text="Modelo:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="textFieldModelo" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Ano:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="textFieldAno" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Cor:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="textFieldCor" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <Button fx:id="btnSalvar" onAction="#handleSalvarCarro" prefWidth="100" text="Salvar"/>
+        <Button fx:id="btnAbrirLog" onAction="#handleAbrirLog" prefWidth="150" text="Abrir Pasta do Log"/>
+
+        <Label fx:id="labelStatus" style="-fx-text-fill: green; -fx-font-weight: bold; -fx-padding: 10 0 0 0;" text=""/>
+        <Label fx:id="labelErro" style="-fx-text-fill: red;" text=""/>
+    </VBox>
+
+
+    <VBox spacing="10" style="-fx-padding: 10;">
+
+        <Label text="Carros Cadastrados" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+        <TableView fx:id="tabelaCarros" prefHeight="250.0">
+            <columns>
+                <TableColumn fx:id="colunaModelo" prefWidth="150.0" text="Modelo"/>
+                <TableColumn fx:id="colunaAno" prefWidth="75.0" text="Ano"/>
+                <TableColumn fx:id="colunaCor" prefWidth="150.0" text="Cor"/>
+            </columns>
+        </TableView>
+
+        <Label text="Log de Atividades" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+        <TextArea fx:id="textAreaLog" editable="false" prefHeight="200.0" wrapText="true"/>
+    </VBox>
+
+</SplitPane>
