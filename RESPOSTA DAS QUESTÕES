@@ -1,0 +1,21 @@
+Questão 1
+O MVC (Model-View-Controller) é um jeito de organizar o código dividindo o sistema em três partes:
+ModelO (Modelo): cuida dos dados e das regras.
+Exemplo: uma classe Carro com os atributos modelo e ano, e uma regra dizendo que o ano não pode ser menor que 1900.
+View (Visão): é o que o usuário vê e usa.
+Exemplo: a tela onde a pessoa digita o modelo e o ano do carro.
+Controller (Controlador): faz a ligação entre a View e o Model.
+Exemplo: quando o usuário clica em “Salvar”, o Controller pega os dados da tela e manda o Model salvar o carro.
+
+Questão 2
+Separar as três partes é importante porque deixa o sistema mais organizado e fácil de arrumar.
+Exemplo: se colocar o código do banco de dados na tela (View), toda vez que mudar algo no banco será preciso mexer na tela também.
+Exemplo: se a regra de validar o CPF estiver no Controller, e precisar usar essa mesma regra em outro lugar, vai ter que copiar o código — o que pode causar erros.
+
+Questão 3
+No JavaFX, o Controller é quem conversa com o Model e a View:
+Controller → Model: o Controller manda o Model salvar ou buscar dados.
+Exemplo: carroService.salvar(carro);
+Controller → View: o Controller atualiza o que aparece na tela.
+Exemplo: labelStatus.setText("Carro salvo com sucesso!");
+A View nunca fala direto com o Model, tudo passa pelo Controller.
